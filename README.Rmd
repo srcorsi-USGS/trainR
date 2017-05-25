@@ -1,0 +1,14 @@
+---
+title: "README"
+author: "Lindsay R. Carr"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: 
+  md_document:
+    variant: markdown_github
+---
+
+## Installation instructions
+
+```{r, eval=FALSE}
+devtools::install_github("USGS-R/trainR")
+```
