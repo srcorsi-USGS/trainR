@@ -1,0 +1,16 @@
+Package: trainR
+Type: Package
+Title: Example package for learning how to develop R packages.
+Version: 0.1
+Date: 2017-05-25
+Authors@R: c( 
+    person("Lindsay", "Carr", role = c("aut", "cre"), email = "lcarr@usgs.gov"))
+Description: Setup as a package for people to practice package development 
+    best practices, such as documentation and testing. There are undocumented
+    functions, known errors, and bad tests so people can practice development skills.
+License: CC0
+Copyright: This software is in the public domain because it contains materials
+    that originally came from the United States Geological Survey, an agency of
+    the United States Department of Interior. 
+Suggests: testthat
+
