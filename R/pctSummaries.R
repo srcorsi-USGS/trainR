@@ -1,21 +1,21 @@
-pctCensored <- function(vals, digits=2){
-  cen_i <- whichCensored(vals)
-  cen_pct <- calcPercent(ninterest = length(cen_i),
-                         ntotal = length(vals),
-                         digits = digits)
-  return(cen_pct)
+pct_censored <- function(vals, digits=2){
+  cen.i <- which_censored(vals)
+  cen.pct <- calc_pct(ninterest = length(cen.i),
+                      ntotal = length(vals),
+                      digits = digits)
+  return(cen.pct)
 }
 
-pctMissing <- function(vals, digits=2){
-  na_i <- which(is.na(vals))
-  na_pct <- calcPercent(ninterest = length(na_i),
-                        ntotal = length(vals),
-                        digits = digits)
-  return(na_pct)
+pct_missing <- function(vals, digits=2){
+  na.i <- which(is.na(vals))
+  na.pct <- calc_pct(ninterest = length(na.i),
+                     ntotal = length(vals),
+                     digits = digits)
+  return(na.pct)
 }
 
-calcPercent <- function(ninterest, ntotal, digits=2){
+calc_pct <- function(ninterest, ntotal, digits=2){
   pct <- ninterest/ntotal*100
-  pct_rnd <- round(pct)
-  return(pct_rnd)
+  pct.rnd <- round(pct)
+  return(pct.rnd)
 }

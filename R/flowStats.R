@@ -1,18 +1,18 @@
 
-addAnnualPeakFlow <- function(flowTS){
-  flowTS_grpd <- group_by(flowTS, year)
-  flowTS_pk <- mutate(flowTS_grpd, flow_pk = max(flow))
-  return(flowTS_pk)
+add_annual_peak_flow <- function(flow.ts){
+  flow.ts.grpd <- group_by(flow.ts, year)
+  flow.ts.pk <- mutate(flow.ts.grpd, flow.pk = max(flow))
+  return(flow.ts.pk)
 }
 
-addAnnualMedianFlow <- function(flowTS){
-  flowTS_grpd <- group_by(flowTS, year)
-  flowTS_med <- mutate(flowTS_grpd, flow_med = median(flow))
-  return(flowTS_med)
+add_annual_median_flow <- function(flow.ts){
+  flow.ts.grpd <- group_by(flow.ts, year)
+  flow.ts.med <- mutate(flow.ts.grpd, flow.med = median(flow))
+  return(flow.ts.med)
 }
 
-addAnnualLowFlow <- function(flowTS){
-  flowTS_grpd <- group_by(flowTS, year)
-  flowTS_low <- mutate(flowTS_grpd, flow_low = min(flow))
-  return(flowTS_low)
+add_annual_low_flow <- function(flow.ts){
+  flow.ts.grpd <- group_by(flow.ts, year)
+  flow.ts.low <- mutate(flow.ts.grpd, flow.low = min(flow))
+  return(flow.ts_low)
 }
