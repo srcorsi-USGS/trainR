@@ -5,9 +5,8 @@ calc_water_year <- function(date.vec){
   cal.mon <- date.time.vec[['mon']] + 1
   
 
-  # when the date is NA, it should not try to add 1. conflict resolution!
-
-  #made a new comment
+  # address NA dates and made a new comment
+  # when the date is NA, it should not try to add 1
   which.past.oct <- cal.mon >= 10
   
   # add one to the year if it is in October or after
