@@ -9,8 +9,11 @@ calc_water_year <- function(date.vec){
   which.past.oct <- cal.mon >= 10
   
   # add one to the year if it is in October or after
+  # October is end of water year
   water.year <- cal.year
   water.year[which.past.oct] <- cal.year[which.past.oct] + 1
   
   return(water.year)
 }
+
+#testing: conflict resolution
