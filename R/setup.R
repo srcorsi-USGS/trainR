@@ -17,12 +17,12 @@
 #' @importFrom grithub create.issue
 #' 
 #' @export
-createNewIssues <- function(repo_name, issue_json="inst/extdata/issuetemplates.json", 
+create.new.issues <- function(repo.name, issue.json="inst/extdata/issuetemplates.json", 
                             org="USGS-R", ctx = get.github.context()){
   
   # make issues from the issue template JSON file
-  issue_content <- readLines(issue_json)
-  new_issues <- lapply(issue_content, create.issue, owner=org, repo=repo_name, ctx=ctx)
+  issue.content <- readLines(issue.json)
+  new.issues <- lapply(issue.content, create.issue, owner=org, repo=repo.name, ctx=ctx)
   
-  return(new_issues)
+  return(new.issues)
 }
